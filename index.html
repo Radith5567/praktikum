@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penjualan Bisnis</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+      header {
+        background-color: #ffd700; /* Warna kuning keemasan */
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2 {
+        color: #ffd700; /* Warna kuning keemasan */
+      }
+      .product {
+        margin-bottom: 20px;
+      }
+      .product img {
+        max-width: 100%;
+        height: auto;
+      }
+      .form-group {
+        margin: 15px 0;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      input[type="submit"] {
+        background-color: #ffd700; /* Warna kuning keemasan */
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #ffc300; /* Warna kuning lebih terang saat hover */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Selamat Datang di Toko Penjualan Bisnis</h1>
+    </header>
+
+    <div class="container">
+      <h2>Produk Kami</h2>
+
+      <div class="product">
+        <h3>Produk 1: Osiloskop Digital</h3>
+        <img src="osiloskop.jpg" alt="Osiloskop Digital" />
+        <p>
+          Deskripsi: Osiloskop digital dengan berbagai fitur canggih untuk
+          analisis sinyal listrik.
+        </p>
+        <p>Harga: Rp 5.000.000</p>
+      </div>
+
+      <div class="product">
+        <h3>Produk 2: Multimeter Digital</h3>
+        <img src="multimeter.jpg" alt="Multimeter Digital" />
+        <p>
+          Deskripsi: Multimeter digital untuk pengukuran tegangan, arus, dan
+          resistansi.
+        </p>
+        <p>Harga: Rp 1.500.000</p>
+      </div>
+
+      <h2>Pemesanan</h2>
+      <form action="submit_order.php" method="POST">
+        <div class="form-group">
+          <label for="name">Nama:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="product">Pilih Produk:</label>
+          <select id="product" name="product" required>
+            <option value="osiloskop">Osiloskop Digital</option>
+            <option value="multimeter">Multimeter Digital</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="quantity">Jumlah:</label>
+          <input type="number" id="quantity" name="quantity" min="1" required />
+        </div>
+        <input type="submit" value="Pesan Sekarang" />
+      </form>
+    </div>
+  </body>
+</html>
